@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+
+.btn {
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  padding: 4.5px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+  outline: none;
+  background-color: rgb(167, 166, 166);
+
+  &:hover {
+      background-color: rgb(112, 112, 112);
+  }
+}
+
+
+
+
+
+// .App-logo {
+//   height: 40vmin;
+// }
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .App-logo {
+//     animation: App-logo-spin infinite 5s linear;
+//   }
+// }
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
