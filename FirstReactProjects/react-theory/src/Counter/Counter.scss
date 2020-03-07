@@ -1,0 +1,19 @@
+.counter {
+  margin: 0 auto 15px;
+}
+.cuontBtn {
+  border-radius: 50%;
+  outline: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: rgb(167, 167, 167);
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  transition: 0.4s;
+  &:hover {
+    cursor: pointer;
+    background: #ccc;
+    color: #fff;
+  }
+}

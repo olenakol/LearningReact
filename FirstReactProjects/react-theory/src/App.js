@@ -1,18 +1,32 @@
 import React, {Component} from 'react';
 import './App.scss';
 import Car from './Car/Car'
+import Counter from './Counter/Counter'
 
 class App extends Component {
-  
-  state = {
-    cars: [
-      {name: 'Mazda' , year: 2018},
-      {name: 'Ford' , year: 2016},
-      {name: 'Audi' , year: 2020}
-    ],
-    pageTitle: 'React components',
-    showCars: true
+
+  constructor (props) {
+    super (props)
+    this.state = {
+      cars: [
+        {name: 'Mazda' , year: 2018},
+        {name: 'Ford' , year: 2016},
+        {name: 'Audi' , year: 2020}
+      ],
+      pageTitle: 'React components',
+      showCars: true
+    }
   }
+  
+  // state = {
+  //   cars: [
+  //     {name: 'Mazda' , year: 2018},
+  //     {name: 'Ford' , year: 2016},
+  //     {name: 'Audi' , year: 2020}
+  //   ],
+  //   pageTitle: 'React components',
+  //   showCars: true
+  // }
 
   // зміна заголовку сторінки
   // changeTitleOnClick = (newTitle) => {
@@ -73,13 +87,17 @@ class App extends Component {
     return (
 
       <div className="App" >
-        <h1>{this.state.pageTitle}</h1>
+        {/* <h1>{this.state.pageTitle}</h1> */}
 
+        <h1>{this.props.title}</h1>
+
+        <Counter/>
+        <br></br>
         {/* <input type="text" onChange={this.handleInput}></input> */}
 
         <button onClick={this.toggleCarsHandler} className='btn'>Toggle Cars</button>
         <div style={{
-          width: 400,
+          width: 300,
           margin: 'auto',
           paddingTop: '20px'
         }}>
