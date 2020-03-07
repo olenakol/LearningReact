@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import './Counter.scss'
+import Counter2 from '../Counter2/Counter2'
 
 export default class Counter extends Component {
 
@@ -28,6 +29,7 @@ export default class Counter extends Component {
             // <div className="counter">
             <React.Fragment>
                 <h2>Counter {this.state.counter}</h2>
+                <Counter2></Counter2>
                 <button className="cuontBtn" onClick={this.addCounter}>+</button>
                 <button className="cuontBtn" onClick={() => this.setState({counter: this.state.counter- 1})}>-</button>
             </React.Fragment>

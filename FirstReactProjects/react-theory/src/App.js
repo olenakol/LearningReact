@@ -3,11 +3,14 @@ import './App.scss';
 import Car from './Car/Car'
 import Counter from './Counter/Counter'
 
+ export const ClickedContext = React.createContext(false)
+
 class App extends Component {
 
   constructor (props) {
     super (props)
     this.state = {
+      clicked: false,
       cars: [
         {name: 'Mazda' , year: 2018},
         {name: 'Ford' , year: 2016},
@@ -77,6 +80,7 @@ class App extends Component {
           key={index} // треба додавати кюч елемента
           name={car.name} 
           year={car.year}
+          index={index}
           onChangeName={event => this.onChangeName(event.target.value, index)}
           onDelete={this.deleteHandler.bind(this, index)}
         
@@ -90,8 +94,11 @@ class App extends Component {
         {/* <h1>{this.state.pageTitle}</h1> */}
 
         <h1>{this.props.title}</h1>
-
-        <Counter/>
+        <ClickedContext.Provider value={this.state.clicked}>
+          <Counter/>
+        </ClickedContext.Provider>
+        <br></br>
+        <button className="btn" style={{marginBottom: '15px'}} onClick={() => this.setState({clicked:true})}>Changed Click</button>
         <br></br>
         {/* <input type="text" onChange={this.handleInput}></input> */}
 
